@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title>State form</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <form name="stateform" id="stateform">
+            <label for="stateid">State ID :</label>
+            <input type="number" name="stateid" id="stateid" ><br><br>
+
+            <label for="statename">State Name :</label>
+            <input type="text" name="statename" id="statename" ><br><br>
+
+            <input type="submit" name="submit" id="submit">
+        </form>
+        <script>
+            $(document).ready(function(){
+                $("#stateform").on('submit',function(){
+            
+                    var stateid=$("#stateid").val();
+                    var statename=$("#statename").val();
+                    
+                    if(stateid.length == 0){
+                        alert("Must enter state ID");
+                        return false;
+                    }
+                    if(statename.length == 0){
+                        alert("Must enter state name");
+                        return false;
+                    } 
+                });
+            });
+        </script>
+    </body>
+</html>

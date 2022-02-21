@@ -1,0 +1,69 @@
+<html>
+    <head>
+        <title>Otp form</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <form name="otpform" id="otpform">
+            <label for="Srnumber">Sr Number:</label><br>
+            <input type="number" name="Srnumber" id="Srnumber"><br>
+            <label for="otp">OTP</label><br>
+            <input type="text" name="otp" id="otp"><br>
+            <label for="otpfor">OPT For</label><br>
+            <input type="text" name="otpfor" id="otpfor"><br>
+            <label for="toemailaddress">To email address</label><br>
+            <input type="email" name="toemailaddress" id="toemailaddress"><br>
+            <label for="expiretime">Expire Time</label><br>
+            <input type="time" name="expiretime" id="expiretime"><br>
+            <label for="status">Status</label><br>
+            <input type="text" name="status" id="status"><br>
+            <label for="loginid">login ID:</label><br>
+            <input type="number" name="loginid" id="loginid"><br><br>
+            <input type="submit" value="Submit">
+        </form>
+        <script>
+            $(document).ready(function(){
+                $("#otpform").on('submit',function(){
+            
+                    var Srnumber=$("#Srnumber").val();
+                    var otp=$("#otp").val();
+                    var otpfor=$("#otpfor").val();
+                    var toemailaddress=$("#toemailaddress").val();
+                    var expiretime=$("#expiretime").val();
+                    var status=$("#status").val();
+                    var loginid=$("#loginid").val();
+                    
+                    if(Srnumber.length == 0){
+                        alert("Must enter Sr number");
+                        return false;
+                    }
+                    if(otp.length == 0){
+                        alert("Must enter Otp");
+                        return false;
+                    }
+                    if(otpfor.length == 0){
+                        alert("Must enter OTP For");
+                        return false;
+                    }
+                    if(toemailaddress.length == 0){
+                        alert("Must enter receiver's email address");
+                        return false;
+                    }
+                    if(expiretime.length == 0){
+                        alert("Must enter Expire time");
+                        return false;
+                    }
+                    if(status.length == 0){
+                        alert("Must enter Status");
+                        return false;
+                    }
+                    if(loginid.length == 0){
+                        alert("Must enter Login ID");
+                        return false;
+                    }
+                    
+                });
+            });
+        </script>
+    </body>
+</html>

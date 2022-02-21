@@ -1,0 +1,69 @@
+<html>
+    <head>
+        <title>offers form</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <form name="offersform" id="offersform">
+            <label for="offerid">Offer ID :</label>
+            <input type="number" name="offerid" id="offerid" ><br><br>
+
+            <label for="offertitle">Offer title :</label>
+            <input type="text" name="offertitle" id="offertitle" ><br><br>
+
+            <label for="businessid">Business ID :</label>
+            <input type="number" name="businessid" id="businessid"><br><br>
+
+            <label for="offerdetails">Offer Details :</label>
+            <input type="text" name="offerdetails" id="offerdetails"><br><br>
+
+            <label for="fromdate">From date :</label>
+            <input type="datetime" name="fromdate" id="fromdate"><br><br>
+
+            <label for="todate">To date :</label>
+            <input type="datetime" name="todate" id="todate"><br><br>
+
+            <input type="submit" name="submit" id="submit">
+
+        </form>
+        <script>
+            $(document).ready(function(){
+                $("#customerform").on('submit',function(){
+            
+                    var offerid=$("#offerid").val();
+                    var offertitle=$("#offertitle").val();
+                    var businessid=$("#businessid").val();
+                    var offerdetails=$("#offerdetails").val();
+                    var fromdate=$("#fromdate").val();
+                    var todate=$("#addressline1").val();
+                    
+                    if(offerid.length == 0){
+                        alert("Must enter Offer ID");
+                        return false;
+                    }
+                    if(offertitle.length == 0){
+                        alert("Must enter Offer title");
+                        return false;
+                    }
+                    if(businessid.length == 0){
+                        alert("Must enter Business ID");
+                        return false;
+                    }
+                    if(offerdetails.length == 0){
+                        alert("Must enter Offer details");
+                        return false;
+                    }
+                    if(fromdate.length == 0){
+                        alert("Must enter From date");
+                        return false;
+                    }
+                    if(todate.length == 0){
+                        alert("Must enter To date");
+                        return false;
+                    }
+                    
+                });
+            });
+        </script>
+    </body>
+</html>

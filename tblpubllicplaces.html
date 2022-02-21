@@ -1,0 +1,100 @@
+<html>
+    <head>
+        <title>Public places form</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <form name="publicplacesform" id="publicplacesform">
+            <label for="placeid">Place ID :</label>
+            <input type="number" name="placeid" id="placeid" ><br><br>
+
+            <label for="placename">Place Name :</label>
+            <input type="text" name="placename" id="placename" ><br><br>
+
+            <label for="placetype">Place type :</label>
+            <input type="text" name="placetype" id="placetye"><br><br>
+
+            <label for="placedetails">Place details :</label>
+            <input type="text" name="placedetails" id="placedetails"><br><br>
+
+            <label for="placephoto">Place photo :</label>
+            <input type="text" name="placephoto" id="placephoto"><br><br>
+
+            <label for="addressline1">Address Line 1:</label>
+            <input type="text" name="addressline1" id="addressline1"><br><br>
+
+            <label for="addressline2">Address Line 2 :</label>
+            <input type="text" name="addressline2" id="addressline2"><br><br>
+
+            <label for="addressline3">Address Line 3 :</label>
+            <input type="text" name="addressline3" id="addressline3"><br><br>
+
+            <label for="cityid">City ID :</label>
+            <input type="number" name="cityid" id="cityid"><br><br>
+
+            <label for="pincode">Pincode :</label>
+            <input type="number" name="pincode" id="pincode" ><br><br>
+
+            <input type="submit" name="submit" id="submit">
+
+        </form>
+        <script>
+            $(document).ready(function(){
+                $("#publicplacesform").on('submit',function(){
+            
+                    var placeid=$("#placeid").val();
+                    var placename=$("#placename").val();
+                    var placetype=$("#placetype").val();
+                    var placedetails=$("#placedetails").val();
+                    var placephoto=$("#placephoto").val();
+                    var addressline1=$("#addressline1").val();
+                    var addressline2=$("#addressline2").val();
+                    var addressline3=$("#addressline3").val();
+                    var cityid=$("#cityid").val();
+                    var pincode=$("#pincode").val();
+                    
+                    if(placeid.length == 0){
+                        alert("Must enter Place ID");
+                        return false;
+                    }
+                    if(placename.length == 0){
+                        alert("Must enter Place Name");
+                        return false;
+                    }
+                    if(placetype.length == 0){
+                        alert("Must enter Place Type");
+                        return false;
+                    }
+                    if(placedetails.length == 0){
+                        alert("Must enter Place Details");
+                        return false;
+                    }
+                    if(placephoto.length == 0){
+                        alert("Must enter Place Photo");
+                        return false;
+                    }
+                    if(addressline1.length == 0){
+                        alert("Must enter Address line 1");
+                        return false;
+                    }
+                    if(addressline2.length == 0){
+                        alert("Must enter Address line 2");
+                        return false;
+                    }
+                    if(addressline3.length == 0){
+                        alert("Must enter Address line 3");
+                        return false;
+                    }
+                    if(cityid.length == 0){
+                        alert("Must enter City ID");
+                        return false;
+                    }
+                    if(pincode.length == 0){
+                        alert("Must enter Pincode");
+                        return false;
+                    }
+                });
+            });
+        </script>
+    </body>
+</html>

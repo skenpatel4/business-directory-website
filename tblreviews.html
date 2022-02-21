@@ -1,0 +1,61 @@
+<html>
+    <head>
+        <title>Reviews form</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <form name="reviewsform" id="reviewsform">
+            <label for="reviewid">Review ID:</label><br>
+            <input type="number" name="revieid" id="reviewid"><br>
+            <label for="customerid">Customer ID:</label><br>
+            <input type="number" name="customerid" id="customerid"><br
+            <label for="businessid">Business ID:</label><br>
+            <input type="number" name="businessid" id="businessid"><br>
+            <label for="review">Review:</label><br>
+            <input type="number" name="review" id="review"><br>
+            <label for="ratings">Ratings:</label><br>
+            <input type="number" name="ratings" id="ratings"><br>
+            <label for="date">Date</label><br>
+            <input type="date" name="date" id="date"><br><br>
+            <input type="submit" value="Submit">
+        </form>
+        <script>
+            $(document).ready(function(){
+                $("#reviewsform").on('submit',function(){
+            
+                    var reviewid=$("#reviewid").val();
+                    var customerid=$("#customerid").val();
+                    var businessid=$("#businessid").val();
+                    var review=$("#review").val();
+                    var ratings=$("#ratings").val();
+                    var date=$("#date").val();
+
+                    if(reviewid.length == 0){
+                        alert("Must enter Review ID");
+                        return false;
+                    }
+                    if(customerid.length == 0){
+                        alert("Must enter Customer ID");
+                        return false;
+                    }
+                    if(businessid.length == 0){
+                        alert("Must enter Business ID");
+                        return false;
+                    }
+                    if(review.length == 0){
+                        alert("Must enter review");
+                        return false;
+                    }
+                    if(ratings.length == 0){
+                        alert("Must enter ratings");
+                        return false;
+                    }
+                    if(date.length == 0){
+                        alert("Must enter date");
+                        return false;
+                    }
+                });
+            });
+        </script>
+    </body>
+</html>

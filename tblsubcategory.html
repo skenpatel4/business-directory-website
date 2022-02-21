@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <title>subcategory form</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <form name="subcategoryform" id="subcategoryform">
+            <label for="subcategoryid">Subcategory ID :</label>
+            <input type="number" name="subcategoryid" id="subcategoryid" ><br><br>
+
+            <label for="categoryid">Category ID :</label>
+            <input type="number" name="categoryid" id="categoryid" ><br><br>
+
+            <label for="subcategoryname">Subcategory Name :</label>
+            <input type="text" name="subcategoryname" id="subcategoryname"><br><br>
+
+            <input type="submit" name="submit" id="submit">
+        </form>
+        <script>
+            $(document).ready(function(){
+                $("#subcategoryform").on('submit',function(){
+            
+                    var subcategoryid=$("#subcategoryid").val();
+                    var categoryid=$("#categoryid").val();
+                    var subcategorynamee=$("#subcategoryname").val();
+
+                    if(subcategoryid.length == 0){
+                        alert("Must enter subcategory ID");
+                        return false;
+                    }
+                    if(categoryid.length == 0){
+                        alert("Must enter category ID");
+                        return false;
+                    }
+                    if(subcategorynamee.length == 0){
+                        alert("Must enter subcategory name");
+                        return false;
+                    }    
+                });
+            });
+        </script>
+    </body>
+</html>

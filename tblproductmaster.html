@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <title>Product Master form</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <form name="productmasterform" id="productmasterform">
+            <label for="productid">Product ID:</label><br>
+            <input type="number" name="productid" id="productid"><br>
+            <label for="productname">Product Name</label><br>
+            <input type="text" name="productname" id="productname"><br>
+            <label for="productphoto">Product Photo</label><br>
+            <input type="text" name="productphoto" id="productphoto"><br><br>
+            <input type="submit" value="Submit">
+        </form>
+        <script>
+            $(document).ready(function(){
+                $("#productmasterform").on('submit',function(){
+            
+                    var productid=$("#productid").val();
+                    var productname=$("#productname").val();
+                    var productphoto=$("#productphoto").val();
+                    
+                    if(productid.length == 0){
+                        alert("Must enter Product ID");
+                        return false;
+                    }
+                    if(productname.length == 0){
+                        alert("Must enter Product name");
+                        return false;
+                    }
+                    if(productphoto.length == 0){
+                        alert("Must enter Product photo");
+                        return false;
+                    }
+                    
+                });
+            });
+        </script>
+    </body>
+</html>

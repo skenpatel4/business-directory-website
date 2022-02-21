@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <title>Testimonials form</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <form name="testimonialsform" id="testimonialsform">
+            <label for="testimonialid">Testimonial ID :</label>
+            <input type="number" name="testimonialid" id="testimonialid" ><br><br>
+
+            <label for="businessid">Business ID :</label>
+            <input type="number" name="businessid" id="businessid" ><br><br>
+
+            <label for="name">Name :</label>
+            <input type="text" name="name" id="name"><br><br>
+
+            <label for="details">Details :</label>
+            <input type="text" name="details"  id="details"><br><br>
+
+            <input type="submit" name="submit" id="submit">
+
+        </form>
+        <script>
+            $(document).ready(function(){
+                $("#testimonialsform").on('submit',function(){
+            
+                    var testimonialid=$("#testimonialid").val();
+                    var businessid=$("#businessid").val();
+                    var name=$("#name").val();
+                    var details=$("#details").val();
+
+                    if(testimonialid.length == 0){
+                        alert("Must enter testimonial ID");
+                        return false;
+                    }
+                    if(businessid.length == 0){
+                        alert("Must enter business ID");
+                        return false;
+                    }
+                    if(name.length == 0){
+                        alert("Must enter name");
+                        return false;
+                    }
+                    if(details.length == 0){
+                        alert("Must enter details");
+                        return false;
+                    }
+                    
+                });
+            });
+        </script>
+    </body>
+</html>

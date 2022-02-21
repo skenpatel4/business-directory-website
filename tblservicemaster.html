@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <title>Service Master form</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <form name="servicemasterform" id="servicemasterform">
+            <label for="serviceid">Service ID:</label><br>
+            <input type="number" name="serviceid" id="serviceid"><br>
+            <label for="servicename">Service Name</label><br>
+            <input type="text" name="servicename" id="servicename"><br>
+            <label for="servicephoto">Service Photo</label><br>
+            <input type="text" name="servicephoto" id="servicephoto"><br><br>
+            <input type="submit" value="Submit">
+        </form>
+        <script>
+            $(document).ready(function(){
+                $("#servicemasterform").on('submit',function(){
+            
+                    var serviceid=$("#serviceid").val();
+                    var servicename=$("#servicename").val();
+                    var servicephoto=$("#servicephoto").val();
+                    
+                    if(serviceid.length == 0){
+                        alert("Must enter Service ID");
+                        return false;
+                    }
+                    if(servicename.length == 0){
+                        alert("Must enter Service Name");
+                        return false;
+                    }
+                    if(servicephoto.length == 0){
+                        alert("Must enter Service Photo");
+                        return false;
+                    }
+                       
+                });
+            });
+        </script>
+    </body>
+</html>

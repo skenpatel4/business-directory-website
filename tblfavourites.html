@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <title>Favourites form</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <form name="favouritesform" id="favouritesform">
+            <label for="favid">Favourite ID:</label><br>
+            <input type="number" name="favid" id="favid"><br>
+            <label for="businessid">Business ID:</label><br>
+            <input type="number" name="businessid" id="businessid"><br>
+            <label for="customerid">Customer ID:</label><br>
+            <input type="number" name="customerid" id="customerid"><br><br>
+            <input type="submit" value="Submit">
+        </form>
+        <script>
+            $(document).ready(function(){
+                $("#favouritesform").on('submit',function(){
+            
+                    var favid=$("#favid").val();
+                    var businessid=$("#businessid").val();
+                    var customerid=$("#customerid").val();
+              
+                    if(favid.length == 0){
+                        alert("Must enter Favourite ID");
+                        return false;
+                    }
+                    if(businessid.length == 0){
+                        alert("Must enter Business ID");
+                        return false;
+                    }
+                    if(customerid.length == 0){
+                        alert("Must enter Customer ID");
+                        return false;
+                    }
+                    
+                });
+            });
+        </script>
+    </body>
+</html>

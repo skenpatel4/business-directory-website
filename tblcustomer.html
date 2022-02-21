@@ -1,0 +1,84 @@
+<html>
+    <head>
+        <title>Customer form</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <form name="customerform" id="customerform">
+            <label for="customerid">Customer ID:</label><br>
+            <input type="number" name="customerid" id="customerid"><br>
+            <label for="loginid">Login ID:</label><br>
+            <input type="number" name="loginid" id="loginid"><br>
+            <label for="firstname">First Name</label><br>
+            <input type="text" name="firstname" id="firstname"><br>
+            <label for="lastname">Last Name</label><br>
+            <input type="text" name="lastname" id="lastname"><br>
+            <label for="cityid">City ID:</label><br>
+            <input type="number" name="cityid" id="cityid"><br>
+            <label for="addressline1">Address Line 1</label><br>
+            <input type="text" name="addressline1" id="addressline1"><br>
+            <label for="addressline2">Address Line 2</label><br>
+            <input type="text" name="addressline2" id="addressline2"><br>
+            <label for="addressline3">Address Line 3</label><br>
+            <input type="text" name="addressline3" id="addressline3"><br>
+            <label for="pincode">Pincode</label><br>
+            <input type="text" name="pincode" id="pincode"><br><br>
+            <input type="submit" value="Submit">
+        
+        </form>
+        <script>
+            $(document).ready(function(){
+                $("#customerform").on('submit',function(){
+            
+                    var customerid=$("#customerid").val();
+                    var loginid=$("#loginid").val();
+                    var firstname=$("#firstname").val();
+                    var lastname=$("#lastname").val();
+                    var cityid=$("#cityid").val();
+                    var addressline1=$("#addressline1").val();
+                    var addressline2=$("#addressline2").val();
+                    var addressline3=$("#addressline3").val();
+                    var pincode=$("#pincode").val();
+              
+                    if(customerid.length == 0){
+                        alert("Must enter Customer ID");
+                        return false;
+                    }
+                    if(loginid.length == 0){
+                        alert("Must enter Login ID");
+                        return false;
+                    }
+                    if(firstname.length == 0){
+                        alert("Must enter first name");
+                        return false;
+                    }
+                    if(lastname.length == 0){
+                        alert("Must enter Last name");
+                        return false;
+                    }
+                    if(cityid.length == 0){
+                        alert("Must enter City ID");
+                        return false;
+                    }
+                    if(addressline1.length == 0){
+                        alert("Must enter Address line 1");
+                        return false;
+                    }
+                    if(addressline2.length == 0){
+                        alert("Must enter Address line 2");
+                        return false;
+                    }
+                    if(addressline3.length == 0){
+                        alert("Must enter Address line 3");
+                        return false;
+                    }
+                    if(pincode.length == 0){
+                        alert("Must enter pincode");
+                        return false;
+                    }
+                    
+                });
+            });
+        </script>
+    </body>
+</html>

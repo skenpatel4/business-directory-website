@@ -1,0 +1,62 @@
+<html>
+    <head>
+        <title>Reply form</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <form name="replyform" id="replyform">
+            <label for="replyid">Reply ID:</label><br>
+            <input type="number" name="replyid" id="replyid"><br>
+            <label for="inquiryid">Inquiry ID:</label><br>
+            <input type="number" name="inquiryid" id="inquiryid"><br>
+            <label for="businessid">Business ID:</label><br>
+            <input type="number" name="businessid" id="businessid"><br>
+            <label for="customerid">Customer ID:</label><br>
+            <input type="number" name="customerid" id="customerid"><br>
+            <label for="details">Details</label><br>
+            <input type="text" name="details" id="details"><br>
+            <label for="date">Date</label><br>
+            <input type="datetime" name="date" id="date"><br><br>
+            <input type="submit" value="Submit">
+        </form>
+        <script>
+            $(document).ready(function(){
+                $("#replyform").on('submit',function(){
+            
+                    var replyid=$("#replyid").val();
+                    var inquiryid=$("#inquiryid").val();
+                    var businessid=$("#businessid").val();
+                    var customerid=$("#customerid").val();
+                    var details=$("#details").val();
+                    var date=$("#date").val();
+                    
+
+                    if(replyid.length == 0){
+                        alert("Must enter Reply ID");
+                        return false;
+                    }
+                    if(inquiryid.length == 0){
+                        alert("Must enter Inquiry ID");
+                        return false;
+                    }
+                    if(businessid.length == 0){
+                        alert("Must enter Business ID");
+                        return false;
+                    }
+                    if(customerid.length == 0){
+                        alert("Must enter Customer ID");
+                        return false;
+                    }
+                    if(details.length == 0){
+                        alert("Must enter details");
+                        return false;
+                    }
+                    if(date.length == 0){
+                        alert("Must enter Date");
+                        return false;
+                    }
+                });
+            });
+        </script>
+    </body>
+</html>
